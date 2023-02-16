@@ -1,0 +1,107 @@
+*{  
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+/*     border: 1px solid black;
+ */}
+
+/*burger-btn nav_close*/
+
+.container .menu__burger .btn_burger{
+    position: absolute;
+    border: none;
+    margin: 3px;
+    height: 20px;
+    width: 20px;
+    cursor: pointer;
+    background: rgb(218, 68, 255);
+    z-index: 100;
+}
+.container .menu__burger .btn_burger.btn-active{
+    background: rgb(255, 47, 203);
+/*     left: 70px;
+ */}
+
+
+.container .menu__burger .btn_burger span{
+    display: block;
+    position: absolute;
+    left: 1px;
+    top: 9px;
+    height: 2px;
+    width: 18px;
+    content: '';
+    background-color: rgb(0, 3, 184);
+    transition: background 0s 0.3s;
+}
+.container .menu__burger .btn_burger span::after,
+.container .menu__burger .btn_burger span::before{
+    position: absolute;
+    display: block;
+    left: 0px;
+    height: 2px;
+    width: 18px;
+    content: '';
+    background-color: rgb(0, 3, 184);
+}
+.container .menu__burger .btn_burger span::after,
+.container .menu__burger .btn_burger span::before{
+    transition-duration: 0.3s, 0.3s;
+    transition-delay: 0.3s, 0s;
+}
+.container .menu__burger .btn_burger span::after {
+    top: 5px;
+    transition-property: top, transform;
+}
+.container .menu__burger .btn_burger span::before {
+    bottom: 5px;
+    transition-property: bottom, transform;
+}
+
+.container .menu__burger .btn_burger.btn-active span{
+    background: none;
+}
+.container .menu__burger .btn_burger.btn-active span::after{
+    top: 0px;
+    transform: rotate(45deg);
+}
+.container .menu__burger .btn_burger.btn-active span::before{
+    bottom: 0px;
+    transform: rotate(-45deg);
+}
+
+.container .menu__burger .nav__burger{
+    position: absolute;
+    width: 100px;
+    transition: all ease 1s;
+    left: -100px;
+    top: 0;
+}
+.container .menu__burger .nav__burger.nav-active{
+    left: 0px;
+}
+
+
+.container .menu__burger .nav__burger .menu__list{
+    display: block;
+    padding: 29px 0px 0px 0px;
+    list-style-type: none;
+    background: linear-gradient(to left, blue, pink);
+}
+
+.container .menu__burger .nav__burger .menu__list .menu_item{
+    padding: 3px;
+}
+
+.container .menu__burger .nav__burger .menu__list .menu_item a{
+    text-decoration: none;
+}
+
+.container .menu__burger .nav__burger .menu__list .menu_item:hover {
+    background-color: rgba(255, 0, 212, 0.979);
+    color: aliceblue;
+}
+
+.menu__burger .nwr img{
+    width: 100px;
+}
